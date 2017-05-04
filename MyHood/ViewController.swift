@@ -8,18 +8,47 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        var post1 = Post(imagePath: "", title: "Post 1", postDesc: "Post 1 description")
+        var post2 = Post(imagePath: "", title: "post 2", postDesc: "Post 2 description")
+        var post3 = Post(imagePath: "", title: "Post 3", postDesc: "Post 3 description")
+        
+        posts.append(post1)
+        posts.append(post2)
+        posts.append(post3)
+        
+        tableView.reloadData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let post = posts[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostTableViewCell {
+            cell.updateCell(post: post)
+            return cell
+        } else {
+            let cell = PostTableViewCell()
+            cell.updateCell(post: post)
+            return cell
+        }
+    }
 }
+
+
 

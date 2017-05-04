@@ -14,6 +14,9 @@
 		D790854D1EA8670000015524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D790854B1EA8670000015524 /* LaunchScreen.storyboard */; };
 		D79085581EA8670000015524 /* MyHoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79085571EA8670000015524 /* MyHoodTests.swift */; };
 		D79085631EA8670000015524 /* MyHoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79085621EA8670000015524 /* MyHoodUITests.swift */; };
+		D79085721EA8677F00015524 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79085711EA8677F00015524 /* Post.swift */; };
+		D7D9BD721EA86FCA008D15C0 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9BD711EA86FCA008D15C0 /* PostTableViewCell.swift */; };
+		D7D9BD751EB1A650008D15C0 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9BD741EB1A650008D15C0 /* AddPostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		D790855E1EA8670000015524 /* MyHoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyHoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79085621EA8670000015524 /* MyHoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHoodUITests.swift; sourceTree = "<group>"; };
 		D79085641EA8670000015524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D79085711EA8677F00015524 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D7D9BD711EA86FCA008D15C0 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		D7D9BD741EB1A650008D15C0 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,10 @@
 		D79085411EA8670000015524 /* MyHood */ = {
 			isa = PBXGroup;
 			children = (
+				D7D9BD731EB1A5F8008D15C0 /* Controller */,
+				D7D9BD701EA86FB1008D15C0 /* View */,
+				D79085701EA8674200015524 /* Model */,
 				D79085421EA8670000015524 /* AppDelegate.swift */,
-				D79085441EA8670000015524 /* ViewController.swift */,
 				D79085461EA8670000015524 /* Main.storyboard */,
 				D79085491EA8670000015524 /* Assets.xcassets */,
 				D790854B1EA8670000015524 /* LaunchScreen.storyboard */,
@@ -123,6 +131,31 @@
 				D79085641EA8670000015524 /* Info.plist */,
 			);
 			path = MyHoodUITests;
+			sourceTree = "<group>";
+		};
+		D79085701EA8674200015524 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D79085711EA8677F00015524 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D7D9BD701EA86FB1008D15C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7D9BD711EA86FCA008D15C0 /* PostTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D7D9BD731EB1A5F8008D15C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D79085441EA8670000015524 /* ViewController.swift */,
+				D7D9BD741EB1A650008D15C0 /* AddPostViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D79085721EA8677F00015524 /* Post.swift in Sources */,
+				D7D9BD751EB1A650008D15C0 /* AddPostViewController.swift in Sources */,
 				D79085451EA8670000015524 /* ViewController.swift in Sources */,
 				D79085431EA8670000015524 /* AppDelegate.swift in Sources */,
+				D7D9BD721EA86FCA008D15C0 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +541,7 @@
 				D79085691EA8670000015524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D790856A1EA8670000015524 /* Build configuration list for PBXNativeTarget "MyHoodTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +550,7 @@
 				D790856C1EA8670000015524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D790856D1EA8670000015524 /* Build configuration list for PBXNativeTarget "MyHoodUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +559,7 @@
 				D790856F1EA8670000015524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
